@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nutriment</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" type="image/png" href="img/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,600;0,700;1,100&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+    <section class="header" id="header">
+        <nav>
+            <a href="index.html">
+                <h2>nutriment</h2>
+            </a>
+
+            <div class="nav-links" id="nav-links">
+                <ul>
+                    <li><a href="#" id="basket-link"><i class="fa-solid fa-basket-shopping"></i></a></li>
+                    <li><a href="#">Главная</a></li>
+                    <li><a href="#menu">Меню</a></li>
+                    <li><a href="#contacts">Контакты</a></li>
+                    <li><a href="#" id="login-btn">Регистрация</a></li>
+                    <li><a href="#" id="register-btn">Вход</a></li>
+                    <select class="lang" onchange="window.location.href = this.options[this.selectedIndex].value">
+                        <option value="index.html">RU</option>
+                        <option value="georgian-lang.html">GE</option>
+                    </select>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="text-box">
+            <h1>НАША ЦЕЛЬ</h1>
+            <p>Главная цель <strong>nutriment</strong> - обеспечить организм человека всеми необходимыми питательными
+                веществами для поддержания здоровья и благополучия. Здоровое питание может помочь предотвратить многие
+                заболевания, такие как диабет, сердечно-сосудистые заболевания, ожирение и др. Кроме того, здоровое
+                питание может улучшить физическую форму, улучшить настроение и повысить энергию. Поэтому наша цель
+                нацелена на предоставление качественной и полезной еды для своих клиентов.</p>
+            <a href="#" class="hero-btn">ЗАКАЗАТЬ</a>
+        </div>
+    </section>
+
+    <!-- For atheletes -->
+
+    <section class="container-item">
+        <div class="nav-container">
+            <ul class="navbar">
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Набор Мышц</a>
+                    <div class="submenu">
+                        <ul>
+                            <li><a href="#">Начинающим</a></li>
+                            <li><a href="#">Продвинутым</a></li>
+                            <li><a href="#">Кардио-тренировки</a></li>
+                            <li><a href="#">Силовые тренировки</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Похудение</a>
+                    <div class="submenu">
+                        <ul>
+                            <li><a href="#">Балансированное питание</a></li>
+                            <li><a href="#">Регулярные тренировки</a></li>
+                            <li><a href="#">Уход за здоровьем</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Поддержание веса</a>
+                    <div class="submenu">
+                        <ul>
+                            <li><a href="#">Диетическое питание</a></li>
+                            <li><a href="#">Интенсивные тренировки</a></li>
+                            <li><a href="#">Контроль порций</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- AUTH and Registration -->
+    <div id="login-modal" class="myModal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Вход</h2>
+            <form>
+                <label for="email">Почта</label>
+                <input type="email" id="email" name="email" placeholder="Email" required />
+                <label for="password">Пароль</label>
+                <input type="password" id="password" name="password" placeholder="password" required />
+                <button type="submit">Войти</button>
+                <p>или</p>
+                <a href="#">Вход через <i class="fa-brands fa-google" style="color: #f22626;"></i></a>
+            </form>
+        </div>
+    </div>
+
+    <!-- Блок для регистрации -->
+    <div id="register-modal" class="myModal">
+        <div class="modal-content">
+            <span class="close-reg">&times;</span>
+            <h2>Регистрация</h2>
+            <form>
+                <label for="firstName">Имя</label>
+                <input type="text" id="firstName" name="firstName" placeholder="Name" required />
+                <label for="lastName">Фамилия</label>
+                <input type="text" id="lastName" name="lastName" placeholder="Lastname" required />
+                <label for="emailReg">Почта</label>
+                <input type="email" id="emailReg" name="emailReg" placeholder="Email" required />
+                <label for="phone">Телефонный номер</label>
+                <input type="tel" id="phone2" name="phone" placeholder=" +995" required />
+                <label for="passwordReg">Пароль</label>
+                <input type="password" id="passwordReg" name="passwordReg" placeholder="password" required />
+                <label for="passwordReg2">Повторите пароль</label>
+                <input type="password" id="passwordReg2" name="passwordReg2" placeholder="confirm password" required />
+                <button type="submit">Зарегистрироваться</button>
+                <p>или</p>
+                <a href="#">Регистрация через <i class="fa-brands fa-google" style="color: #f22626;"></i></a>
+            </form>
+        </div>
+    </div>
+
+    <div class="preview">
+        <div class="bgc_blue"></div>
+        <div class="container">
+            <div class="tabcontainer">
+                <div class="tabcontent">
+                    <img src="img/tabs/vegy.jpg" alt="vegy">
+                    <div class="tabcontent__descr">
+                        Меню "Фитнес" - это новый подход к приготовлению блюд: больше свежих овощей и фруктов. Для
+                        людей, которые интересуются спортом; активных и здоровых. Это абсолютно новый продукт с
+                        оптимальной ценой и высоким качеством!
+                    </div>
+                </div>
+                <div class="tabcontent">
+                    <img src="img/tabs/elite.jpg" alt="elite">
+                    <div class="tabcontent__descr">
+                        Меню “Премиум” - мы используем не только красивый дизайн упаковки, но и качественное исполнение
+                        блюд. Красная рыба, морепродукты, фрукты - ресторанное меню без похода в ресторан!
+                    </div>
+                </div>
+                <div class="tabcontent">
+                    <img src="img/tabs/post.jpg" alt="post">
+                    <div class="tabcontent__descr">
+                        Наше специальное “Постное меню” - это тщательный подбор ингредиентов: полное отсутствие
+                        продуктов животного происхождения. Полная гармония с собой и природой в каждом элементе! Все
+                        будет Ом!
+                    </div>
+                </div>
+                <div class="tabcontent">
+                    <img src="img/tabs/vegy.jpg" alt="vegy">
+                    <div class="tabcontent__descr">
+                        Меню "Сбалансированное" - это соответствие вашего рациона всем научным рекомендациям. Мы
+                        тщательно просчитываем вашу потребность в к/б/ж/у и создаем лучшие блюда для вас.
+                    </div>
+                </div>
+
+                <div class="tabcontent">
+                    <img src="img/tabs/muslim2.jpg" alt="vegy">
+                    <div class="tabcontent__descr">
+                        Меню "Для Мусульман" создано для того, чтобы предложить мусульманским гостям или людям,
+                        придерживающимся исламской веры, возможность насладиться вкусными и качественными блюдами,
+                        которые соответствуют их религиозным и диетическим требованиям.
+                    </div>
+                </div>
+
+                <div class="tabcontent">
+                    <img src="img/tabs/veg11.jpg" alt="vegan">
+                    <div class="tabcontent__descr">
+                        Наше меню для вегетарианцев предлагает разнообразные блюда, приготовленные исключительно из
+                        растительных продуктов. Мы предлагаем широкий выбор вкусных и питательных опций, которые
+                        удовлетворят даже самых требовательных вегетарианцев.
+                    </div>
+                </div>
+                <div class="tabheader">
+                    <h3>Выберите стиль питания</h3>
+                    <div class="tabheader__items">
+                        <div class="tabheader__item tabheader__item_active">Фитнес</div>
+                        <div class="tabheader__item">Премиум</div>
+                        <div class="tabheader__item">Постное</div>
+                        <div class="tabheader__item">Сбалансированное</div>
+                        <div class="tabheader__item">Для Мусульман</div>
+                        <div class="tabheader__item">Для Вегетарианцев</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="offer">
+        <div class="bgc_y"></div>
+        <div class="container">
+            <div class="offer__text">
+                <h2 class="title">Что мы можем вам предложить?</h2>
+                <div class="offer__descr">
+                    Наша основная идея - это правильное питание. Оно может быть простым и вкусным. Мы не просто
+                    доставка, мы сервис! Мы взяли на себя все расчеты БЖУ, калорийности, объемов порций и прочие важные,
+                    но скучные аспекты. Вам остается только полезная, сытная и правильная еда, которую мы привозим прямо
+                    под дверь.
+                </div>
+            </div>
+            <div class="offer__action">
+                <button data-modal class="btn btn_dark">Связаться с нами</button>
+            </div>
+        </div>
+        <div class="container">
+            <div class="offer__advantages">
+                <h2>Быстро и полезно</h2>
+                <div class="offer__advantages-text">
+                    Готовка дома занимает много сил, времени и нервов. Мы привозим еду сразу на целый день, и ты можешь
+                    действовать так, как тебе удобно, не подстраиваясь ни под кого и будучи уверенным в качестве
+                    продукта!
+                </div>
+                <h2>Правильный рацион</h2>
+                <div class="offer__advantages-text">
+                    Мы разработали специальное меню, где учтены все нюансы правильного питания, от баланса БЖУ до их
+                    приготовления и дробления рациона.
+                </div>
+            </div>
+            <div class="offer__slider">
+                <div class="offer__slider-counter">
+                    <div class="offer__slider-prev">
+                        <img src="icons/left.svg" alt="prev">
+                    </div>
+                    <span id="current">03</span>
+                    /
+                    <span id="total">04</span>
+                    <div class="offer__slider-next">
+                        <img src="icons/right.svg" alt="next">
+                    </div>
+                </div>
+                <div class="offer__slider-wrapper">
+                    <div class="offer-slider-inner">
+                        <div class="offer__slide">
+                            <img src="img/slider/pepper.jpg" alt="pepper">
+                        </div>
+                        <div class="offer__slide">
+                            <img src="img/slider/food-12.jpg" alt="food">
+                        </div>
+                        <div class="offer__slide">
+                            <img src="img/slider/olive-oil.jpg" alt="oil">
+                        </div>
+                        <div class="offer__slide">
+                            <img src="img/slider/paprika.jpg" alt="paprika">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="divider"></div>
+
+
+    <!-- Calculating -->
+    <div class="calculating">
+        <div class="container">
+            <h2 class="title">Рассчитаем вашу потребность в калориях?
+            </h2>
+            <div class="calculating__field">
+                <div class="calculating__subtitle">
+                    Ваш пол
+                </div>
+                <div class="calculating__choose" id="gender">
+                    <div id="female" class="calculating__choose-item calculating__choose-item_active">Женщина</div>
+                    <div id="male" class="calculating__choose-item">Мужчина</div>
+                </div>
+
+                <div class="calculating__subtitle">
+                    Ваша конституция
+                </div>
+                <div class="calculating__choose calculating__choose_medium">
+                    <input type="text" id="height" placeholder="Введите рост" class="calculating__choose-item">
+                    <input type="text" id="weight" placeholder="Введите вес" class="calculating__choose-item">
+                    <input type="text" id="age" placeholder="Введите возраст" class="calculating__choose-item">
+                </div>
+
+                <div class="calculating__subtitle">
+                    Выберите вашу физическая активность
+                </div>
+                <div class="calculating__choose calculating__choose_big">
+                    <div data-ratio="1.2" id="low" class="calculating__choose-item">Низкая активность </div>
+                    <div data-ratio="1.375" id="small" class="calculating__choose-item calculating__choose-item_active">
+                        Невысокая активность</div>
+                    <div data-ratio="1.55" id="medium" class="calculating__choose-item">Умеренная активность</div>
+                    <div data-ratio="1.72" id="high" class="calculating__choose-item">Высокая активность</div>
+                </div>
+
+                <div class="calculating__divider"></div>
+
+                <div class="calculating__total">
+                    <div class="calculating__subtitle">
+                        Ваша суточная норма калорий:
+                    </div>
+                    <div class="calculating__result">
+                        <span>2700</span> ккал
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- Menu -->
+    <section class="menu" id="menu">
+        <h1>Меню</h1>
+        <p>У нас более 50 блюд</p>
+
+        <div class="row">
+            <div class="menu-column">
+                <h3>Завтрак</h3>
+                <img src="img/menu/sreda-zavtrak.jpg" alt="zavtrak">
+                <p>Lorem ipsum dolor sit amet.</p>
+                <div class="price">
+                    <span>$5</span>
+                    <button id="baske-btn"><i class="fa-solid fa-basket-shopping"></i></button>
+                </div>
+            </div>
+
+            <div class="menu-column">
+                <h3>Обед</h3>
+                <img src="img/menu/sreda-obed.jpg" alt="zavtrak">
+                <p>Lorem ipsum dolor sit amet.</p>
+                <div class="price">
+                    <span>$5</span>
+                    <button id="basket"><i class="fa-solid fa-basket-shopping"></i></button>
+                </div>
+            </div>
+
+            <div class="menu-column">
+                <h3>Ужин</h3>
+                <img src="img/menu/sreda-ujin.jpg" alt="zavtrak">
+                <p>Lorem ipsum dolor sit amet.</p>
+                <div class="price">
+                    <span>$5</span>
+                    <button id="basket"><i class="fa-solid fa-basket-shopping"></i></button>
+                </div>
+            </div>
+
+            <div class="menu-column">
+                <h3>Вторник: Завтрак</h3>
+                <img src="img/menu/vtornik-zavtrak.jpg" alt="zavtrak">
+                <p>Lorem ipsum dolor sit amet.</p>
+                <div class="price">
+                    <span>$3</span>
+                    <button id="basket"><i class="fa-solid fa-basket-shopping"></i></button>
+                </div>
+            </div>
+            <div class="menu-column">
+                <h3>Вторник: Обед</h3>
+                <img src="img/menu/vtornik-obed.jpg" alt="zavtrak">
+                <p>Lorem ipsum dolor sit amet.</p>
+                <div class="price">
+                    <span>$6</span>
+                    <button id="basket"><i class="fa-solid fa-basket-shopping"></i></button>
+                </div>
+            </div>
+            <div class="menu-column">
+                <h3>Вторник: Ужин</h3>
+                <img src="img/menu/vtornik-ujin.jpg" alt="zavtrak">
+                <p>Lorem ipsum dolor sit amet.</p>
+                <div class="price">
+                    <span>$7</span>
+                    <button id="basket"><i class="fa-solid fa-basket-shopping"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blogs -->
+
+
+    <!-- Blog about healtht food -->
+    <section class="health-lifestyle">
+        <h2>Здоровый образ жизни</h2>
+        <div class="video-container">
+            <video controls poster="/dist/img/lifestyle.jpg">
+                <source src="/dist/img/Healthy Lifestyle.mp4" type="video/mp4">
+            </video>
+        </div>
+    </section>
+
+
+    <section class="order">
+        <div class="container">
+            <h1>Заказывай пробный день прямо сейчас!</h1>
+            <form action="#" class="order__form">
+                <input type="text" placeholder="Ваше имя" class="order__input">
+                <input type="text" placeholder="Ваше номер телефона" class="order__input">
+                <button class="btn btn_dark btn_min" id="form_btn">Перезвонить мне</button>
+            </form>
+        </div>
+    </section>
+
+    <div class="divider"></div>
+    <section class="faq-block">
+        <h2>Часто задаваемые вопросы</h2>
+        <div class="faq-item">
+            <div class="question">Как сделать заказ?</div>
+            <div class="answer">Для заказа еды вы можете воспользоваться нашим онлайн-меню. Нужно выбрать блюда и
+                добавить их в корзину, после чего оформить заказ.</div>
+        </div>
+        <div class="faq-item">
+            <div class="question">Какие способы оплаты вы принимаете?</div>
+            <div class="answer">Мы принимаем оплату наличными и банковской картой. При заказе через сайт вы можете
+                оплатить онлайн.</div>
+        </div>
+        <div class="faq-item">
+            <div class="question">Как долго будет доставка?</div>
+            <div class="answer">Время доставки зависит от вашего местоположения и загруженности кухни. Обычно доставка
+                занимает от 30 до 60 минут.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="question">Ваше меню содержит блюда для людей с диетическими ограничениями?</div>
+            <div class="answer">Да, у нас есть специальное меню для людей с диетическими ограничениями, таких как
+                вегетарианцы, веганы и люди, страдающие аллергией на определенные продукты.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="question">Как мне изменить или отменить заказ?</div>
+            <div class="answer"> Вы можете связаться с нами по телефону или отправить нам сообщение на электронную
+                почту, чтобы изменить или отменить заказ. Если вы уже оплатили заказ, мы вернем вам деньги.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="question">Как часто вы обновляете свое меню?</div>
+            <div class="answer">Мы стараемся обновлять наше меню каждый сезон, чтобы предложить нашим клиентам новые
+                вкусы и свежие блюда.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="question">Как часто вы проверяете качество своих блюд?</div>
+            <div class="answer">Мы проверяем качество наших блюд каждый день, чтобы убедиться, что они соответствуют
+                нашим стандартам качества. Мы также проводим регулярные проверки со стороны наших экспертов по питанию,
+                чтобы убедиться, что наши блюда питательны и здоровые.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="question">Какие услуги вы предоставляете для крупных мероприятий или вечеринок?</div>
+            <div class="answer">Мы предоставляем услуги кейтеринга для крупных мероприятий и вечеринок. Мы можем
+                предложить индивидуальное меню и организовать доставку и сервировку блюд на месте проведения
+                мероприятия.</div>
+        </div>
+    </section>
+
+    <section class="promotion">
+        <div class="bgc_y"></div>
+        <div class="container">
+            <div class="promotion__text">
+                <div class="title">Акция для новых клиентов!</div>
+                <div class="promotion__descr">
+                    Мы ценим каждого клиента и предлагаем вам стать одним из них на очень выгодных условиях.
+                    Каждому, кто закажет доставку питание на неделю, будет предоставлена скидка в размере
+                    <span>20%!</span>
+                    <br><br>
+                    Акция закончится 16 июня в 00:00
+                </div>
+            </div>
+            <div class="promotion__timer">
+                <div class="title">Осталось до конца акции:</div>
+                <div class="timer">
+                    <div class="timer__block">
+                        <span id="days">12</span>
+                        дней
+                    </div>
+                    <div class="timer__block">
+                        <span id="hours">20</span>
+                        часов
+                    </div>
+                    <div class="timer__block">
+                        <span id="minutes">56</span>
+                        минут
+                    </div>
+                    <div class="timer__block">
+                        <span id="seconds">20</span>
+                        секунд
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <footer id="contacts">
+
+        <div class="container__footer">
+            <div class="box__footer">
+                <div class="logo">
+                    <img src="Images/logo-magtimus.png" alt="">
+                </div>
+                <div class="terms">
+                    <p>
+                        Мы команда профессионалов, предоставляющая качественные услуги с фокусом на инновации и высокий
+                        уровень обслуживания. Наша цель - удовлетворение потребностей клиентов и достижение их успеха.
+                        Мы гордимся своим опытом, надежностью и профессионализмом. Мы готовы поддержать вас в реализации
+                        ваших идей и создании долгосрочных партнерских отношений.
+                    </p>
+                </div>
+            </div>
+
+            <div class="box__footer">
+                <h2>Адрес</h2>
+                <a href="#">Tbilisi,Georgia Rustaveli ave</a>
+                <a href="#">nutriment@gmail.com</a>
+                <a href="#">+995 558 31 41 51</a>
+            </div>
+
+            <div class="box__footer">
+                <h2>Компания</h2>
+                <a href="#">О нас</a>
+                <a href="#">Услуги</a>
+                <a href="#">Контакты</a>
+            </div>
+
+            <div class="box__footer">
+                <h2>Социальные сети</h2>
+                <a href="#"> <i class="fab fa-facebook-square"></i> Facebook</a>
+                <a href="#"><i class="fab fa-twitter-square"></i> Twitter</a>
+                <a href="#"><i class="fab fa-linkedin"></i> Linkedin</a>
+                <a href="#"><i class="fab fa-instagram-square"></i> Instagram</a>
+            </div>
+        </div>
+    </footer>
+    <div class="box__copyright">
+        <hr>
+        <p>NUTRIMENT <div class="pepper">
+                <img src="icons/veg.svg" alt="pepper">
+            </div> © 2023 created by <b>TAMERLAN QARAYEV</b></p>
+    </div>
+
+    <div class="modal">
+        <div class="modal__dialog">
+            <div class="modal__content">
+                <form action="#">
+                    <div date-close class="modal__close" id="modal-close">&times;</div>
+                    <div class="modal__title">Мы свяжемся с вами как можно быстрее!</div>
+                    <input required placeholder="Ваше имя" name="name" type="text" class="modal__input">
+                    <input required placeholder="Ваш номер телефона" name="phone" type="phone" class="modal__input">
+                    <button class="btn btn_dark btn_min">Перезвонить мне</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="../dist/js/bundle.js"></script>
+    <script src="app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+</body>
+
+</html>

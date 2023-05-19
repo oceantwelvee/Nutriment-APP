@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nutriment</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" type="image/png" href="img/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,600;0,700;1,100&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+</head>
+<body>
+   
+    <section class="header" id="header">
+        <nav>
+            <a href="index.html">
+                <h2>nutriment</h2>
+            </a>
+
+            <div class="nav-links" id="nav-links">
+                <ul>
+                    <li><a href="#" id="basket-link"><i class="fa-solid fa-basket-shopping"></i></a></li>
+                    <li><a href="#">მთავარი</a></li>
+                    <li><a href="#menu">მენიუ</a></li>
+                    <li><a href="#contacts">კონტაქტები</a></li>
+                    <li><a href="#"  id="login-btn">Login</a></li>
+                    <li><a href="#" id="register-btn">დარეგისტრირდით</a></li>
+                    <select class="lang" onchange="window.location.href = this.options[this.selectedIndex].value">
+                        <option value="georgian-lang.html">GE</option>
+                        <option value="index.html">RU</option>
+                    </select>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="text-box">
+            <h1>ჩვენი მიზანი</h1>
+            <p>მთავარი მიზანი <strong>nutriment</strong> - მიაწოდოს ადამიანის ორგანიზმს ყველა საჭირო საკვები ნივთიერებით ჯანმრთელობისა და კეთილდღეობის შესანარჩუნებლად. ჯანსაღი დიეტა ხელს უწყობს მრავალი დაავადების თავიდან აცილებას, როგორიცაა დიაბეტი, გულ-სისხლძარღვთა დაავადებები, სიმსუქნე და სხვა. გარდა ამისა, ჯანსაღი დიეტა გააუმჯობესებს ფიზიკურ მდგომარეობას, აუმჯობესებს განწყობას და გაზრდის ენერგიას. ამიტომ, ჩვენი მიზანია მივაწოდოთ ხარისხიანი და ჯანსაღი საკვები ჩვენს მომხმარებლებს.</p>
+            <a href="#" class="hero-btn">შეკვეთა</a>
+          </div>
+    </section>
+
+    <!-- For Atheletes -->
+
+    <section class="container-item">
+        <div class="nav-container">
+          <ul class="navbar">
+            <li class="nav-item">
+              <a href="#" class="nav-link">კუნთების ნაკრები</a>
+              <div class="submenu">
+                <ul>
+                  <li><a href="#">დამწყებთათვის</a></li>
+                  <li><a href="#">მოწინავეებისთვის</a></li>
+                  <li><a href="#">კარდიო ვარჯიში</a></li>
+                  <li><a href="#">ძალაუფლების ვარჯიში</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">წონის დაკლება
+                </a>
+                <div class="submenu">
+                    <ul>
+                      <li><a href="#">დაბალანსებული კვება</a></li>
+                      <li><a href="#">რეგულარული ვარჯიშები</a></li>
+                      <li><a href="#">ჯანმრთელობის დაცვა</a></li>
+                    </ul>
+                  </div>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">წონის შენარჩუნება</a>
+                <div class="submenu">
+                    <ul>
+                      <li><a href="#">დიეტური საკვები</a></li>
+                      <li><a href="#">ინტენსიური ვარჯიში</a></li>
+                      <li><a href="#">პორციის კონტროლი</a></li>
+                    </ul>
+                  </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+     <!-- AUTH and Registration -->
+    <!-- Блок для входа -->
+    <div id="login-modal" class="myModal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <h2>შესასვლელი</h2>
+          <form>
+            <label for="email">ფოსტა</label>
+            <input type="email" id="email" name="email" placeholder="ფოსტა" required />
+            <label for="password">პაროლი</label>
+            <input type="password" id="password" name="password" placeholder="პაროლი" required />
+            <button type="submit">შემოსვლა</button>
+            <p>ან</p>
+            <a href="#">
+                შესვლა მეშვეობით <i class="fa-brands fa-google" style="color: #f22626;"></i></a>
+          </form>
+        </div>
+      </div>
+  
+      <!-- Блок для регистрации -->
+      <div id="register-modal" class="myModal">
+        <div class="modal-content">
+          <span class="close-reg">&times;</span>
+          <h2>რეგისტრაცია</h2>
+          <form>
+            <label for="firstName">სახელი</label>
+            <input type="text" id="firstName" name="firstName" placeholder="სახელი" required />
+            <label for="lastName">გვარი</label>
+            <input type="text" id="lastName" name="lastName" placeholder="გვარი" required />
+            <label for="emailReg">ფოსტა</label>
+            <input type="email" id="emailReg" name="emailReg" placeholder="ფოსტა" required />
+            <label for="phone">ტელეფონის ნომერი</label>
+            <input
+              type="tel"
+              id="phone2"
+              name="phone"
+              placeholder=" +995"
+              required
+            />
+            <label for="passwordReg">პაროლი</label>
+            <input type="password" id="passwordReg" name="passwordReg" placeholder="პაროლი" required />
+            <label for="passwordReg2">პაროლის დადასტურება</label>
+            <input
+              type="password"
+              id="passwordReg2"
+              name="passwordReg2"
+              placeholder="პაროლის დადასტურება"
+              required
+            />
+            <button type="submit">რეგისტრაცია</button>
+            <p>ან</p>
+            <a href="#">
+                რეგისტრაცია მეშვეობით <i class="fa-brands fa-google" style="color: #f22626;"></i></a>
+          </form>
+        </div>
+      </div>
+
+    <div class="preview">
+        <div class="bgc_blue"></div>
+        <div class="container">
+            <div class="tabcontainer">
+                <div class="tabcontent">
+                    <img src="img/tabs/vegy.jpg" alt="vegy">
+                    <div class="tabcontent__descr">
+                        მენიუ "ფიტნესი" არის ახალი მიდგომა სამზარეულოში: მეტი ახალი ბოსტნეული და ხილი. სპორტით დაინტერესებული ადამიანებისთვის; აქტიური და ჯანსაღი. ეს არის სრულიად ახალი პროდუქტი საუკეთესო ფასით და მაღალი ხარისხით!
+                    </div>
+                </div>
+                <div class="tabcontent">
+                    <img src="img/tabs/elite.jpg" alt="elite">
+                    <div class="tabcontent__descr">
+                        მენიუ "პრემიუმი" - ვიყენებთ არა მხოლოდ ლამაზი შეფუთვის დიზაინს, არამედ კერძების მაღალხარისხიან შესრულებას. წითელი თევზი, ზღვის პროდუქტები, ხილი - რესტორნის მენიუ რესტორანში წასვლის გარეშე!                                     
+                    </div>
+                </div>
+                <div class="tabcontent">
+                    <img src="img/tabs/post.jpg" alt="post">
+                    <div class="tabcontent__descr">
+                        ჩვენი სპეციალური "მარხვის მენიუ" არის ინგრედიენტების ფრთხილად შერჩევა: ცხოველური პროდუქტების სრული არარსებობა. სრული ჰარმონია საკუთარ თავთან და ბუნებასთან ყველა ელემენტში! ყველაფერი იქნება ომ!                                    
+                    </div>
+                </div>
+                <div class="tabcontent">
+                    <img src="img/tabs/vegy.jpg" alt="vegy">
+                    <div class="tabcontent__descr">
+                        "დაბალანსებული" მენიუ არის თქვენი დიეტის შესაბამისობა ყველა სამეცნიერო რეკომენდაციასთან. ჩვენ გულდასმით ვიანგარიშებთ თქვენს საჭიროებას c/w/w/y და ვქმნით საუკეთესო კერძებს თქვენთვის.
+                    </div>
+                </div>
+
+                <div class="tabcontent">
+                    <img src="img/tabs/muslim2.jpg" alt="vegy">
+                    <div class="tabcontent__descr">
+                        მენიუ „მუსლიმებისთვის“ შექმნილია იმისთვის, რომ მუსლიმ სტუმრებს ან ისლამური რწმენის ადამიანებს შესთავაზოს შესაძლებლობა მიირთვან გემრიელი და ხარისხიანი კერძები, რომლებიც აკმაყოფილებს მათ რელიგიურ და დიეტურ მოთხოვნებს.
+                    </div>
+                </div>
+                <div class="tabcontent">
+                    <img src="img/tabs/veg11.jpg" alt="vegan">
+                    <div class="tabcontent__descr">
+                        ჩვენი ვეგეტარიანული მენიუ გთავაზობთ მრავალფეროვან კერძებს, რომლებიც მომზადებულია ექსკლუზიურად მცენარეული პროდუქტებისგან. ჩვენ გთავაზობთ უგემრიელესი და მკვებავი ვარიანტების ფართო არჩევანს ყველაზე მომთხოვნი ვეგეტარიანელების დასაკმაყოფილებლად.
+                    </div>
+                </div>
+                <div class="tabheader">
+                    <h3>აირჩიეთ კვების სტილი</h3>
+                    <div class="tabheader__items">
+                        <div class="tabheader__item tabheader__item_active">ფიტნესი</div>
+                        <div class="tabheader__item">პრემიუმი</div>
+                        <div class="tabheader__item">მარხვა</div>
+                        <div class="tabheader__item">დაბალანსებული</div>
+                        <div class="tabheader__item">მუსლიმებისთვის</div>
+                        <div class="tabheader__item">ვეგეტარიანელებისთვის</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="offer">
+        <div class="bgc_y"></div>
+        <div class="container">
+            <div class="offer__text">
+                <h2 class="title">რა შეგვიძლია შემოგთავაზოთ?</h2>
+                <div class="offer__descr">
+                    ჩვენი მთავარი იდეა სწორი კვებაა. ეს შეიძლება იყოს მარტივი და გემრიელი. ჩვენ არ ვართ მხოლოდ მიწოდება, ჩვენ ვართ სერვისი! ჩვენ ვიზრუნეთ BJU-ს, კალორიების, პორციის ზომისა და სხვა მნიშვნელოვანი, მაგრამ მოსაწყენი ასპექტების ყველა გამოთვლაზე. თქვენ დაგრჩენიათ მხოლოდ ჯანსაღი, დამაკმაყოფილებელი და სათანადო საკვები, რომელიც ჩვენ პირდაპირ თქვენს კართან მოგიტანთ.
+                </div>
+            </div>
+            <div class="offer__action">
+                <button data-modal class="btn btn_dark">დაუკავშირდით ჩვენთან</button>
+            </div>
+        </div>
+        <div class="container">
+            <div class="offer__advantages">
+                <h2>სწრაფი და გამოსადეგი</h2>
+                <div class="offer__advantages-text">
+                    სახლში საჭმლის მომზადებას დიდი ძალისხმევა, დრო და ნერვები სჭირდება. მთელი დღის საჭმელი ერთბაშად მოგაქვს და თქვენ შეგიძლიათ ისე მოიქცეთ, როგორც გსურთ, არავისთან მორგების გარეშე და პროდუქტის ხარისხში დარწმუნებული!
+                </div>
+                <h2>სწორი დიეტა</h2>
+                <div class="offer__advantages-text">
+                    ჩვენ შევიმუშავეთ სპეციალური მენიუ, რომელიც ითვალისწინებს სწორი კვების ყველა ნიუანსს, BJU-ს ბალანსიდან მათ მომზადებამდე და დიეტის გაყოფამდე.
+                </div>
+            </div>
+            <div class="offer__slider">
+                <div class="offer__slider-counter">
+                    <div class="offer__slider-prev">
+                        <img src="icons/left.svg" alt="prev">
+                    </div>
+                    <span id="current">03</span>
+                    /
+                    <span id="total">04</span>
+                    <div class="offer__slider-next">
+                        <img src="icons/right.svg" alt="next">
+                    </div>
+                </div>
+                <div class="offer__slider-wrapper">
+                    <div class="offer-slider-inner">
+                        <div class="offer__slide">
+                            <img src="img/slider/pepper.jpg" alt="pepper">
+                        </div>
+                        <div class="offer__slide">
+                            <img src="img/slider/food-12.jpg" alt="food">
+                        </div>
+                        <div class="offer__slide">
+                            <img src="img/slider/olive-oil.jpg" alt="oil">
+                        </div>
+                        <div class="offer__slide">
+                            <img src="img/slider/paprika.jpg" alt="paprika">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="divider"></div>
+    <div class="calculating">
+        <div class="container">
+            <h2 class="title">მოდით გამოვთვალოთ თქვენი საჭიროება კალორიებზე?
+            </h2>
+            <div class="calculating__field">
+                <div class="calculating__subtitle">
+                    რა სქესი გაქვს
+                </div>
+                <div class="calculating__choose" id="gender">
+                    <div id="female" class="calculating__choose-item calculating__choose-item_active">ქალი</div>
+                    <div id="male" class="calculating__choose-item">კაცი</div>
+                </div>
+
+                <div class="calculating__subtitle">
+                    შენი კონსტიტუცია
+                </div>
+                <div class="calculating__choose calculating__choose_medium">
+                    <input type="text" id="height" placeholder="შეიყვანეთ სიმაღლე" class="calculating__choose-item">
+                    <input type="text" id="weight" placeholder="შეიყვანეთ წონა"  class="calculating__choose-item">
+                    <input type="text" id="age" placeholder="შეიყვანეთ ასაკი" class="calculating__choose-item">
+                </div>
+
+                <div class="calculating__subtitle">                  
+                    აირჩიეთ თქვენი ფიზიკური აქტივობა
+                </div>
+                <div class="calculating__choose calculating__choose_big">
+                    <div data-ratio="1.2" id="low" class="calculating__choose-item ">დაბალი აქტივობა </div>
+                    <div data-ratio="1.375" id="small"  class="calculating__choose-item calculating__choose-item_active">საშუალო აქტივობა</div>
+                    <div data-ratio="1.55" id="medium" class="calculating__choose-item">ზომიერი აქტივობა</div>
+                    <div data-ratio="1.72" id="high" class="calculating__choose-item">მაღალი აქტივობა</div>
+                </div>
+
+                <div class="calculating__divider"></div>
+
+                <div class="calculating__total">
+                    <div class="calculating__subtitle">
+                        თქვენი ყოველდღიური კალორიების მიღება:
+                    </div>
+                    <div class="calculating__result">
+                        <span>2700</span> კკალ
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- Menu -->
+    <section class="menu" id="menu">
+        <h1>მენიუ</h1>
+        <p>ჩვენ გვაქვს 50-ზე მეტი კერძი</p>
+
+        <div class="row">
+            <div class="menu-column">
+                <h3>საუზმე</h3>
+                <img src="img/menu/sreda-zavtrak.jpg" alt="zavtrak">
+                <p>Lorem ipsum dolor sit amet.</p>
+                <div class="price">
+                    <span>$5</span>
+                    <button id="baske-btn"><i class="fa-solid fa-basket-shopping"></i></button>
+                </div>
+            </div>
+
+            <div class="menu-column">
+                <h3>სადილი</h3>
+                <img src="img/menu/sreda-obed.jpg" alt="zavtrak">
+                <p>Lorem ipsum dolor sit amet.</p>
+                <div class="price">
+                    <span>$5</span>
+                    <button id="basket"><i class="fa-solid fa-basket-shopping"></i></button>
+                </div>
+            </div>
+
+            <div class="menu-column">
+                <h3>ვახშამი</h3>
+                <img src="img/menu/sreda-ujin.jpg" alt="zavtrak">
+                <p>Lorem ipsum dolor sit amet.</p>
+                <div class="price">
+                    <span>$5</span>
+                    <button id="basket"><i class="fa-solid fa-basket-shopping"></i></button>
+                </div>
+            </div>
+
+            <div class="menu-column">
+                <h3>სამშაბათი: საუზმე</h3>
+                <img src="img/menu/vtornik-zavtrak.jpg" alt="zavtrak">
+                <p>Lorem ipsum dolor sit amet.</p>
+                <div class="price">
+                    <span>$3</span>
+                    <button id="basket"><i class="fa-solid fa-basket-shopping"></i></button>
+                </div>
+            </div>  <div class="menu-column">
+                <h3>სამშაბათი: სადილი</h3>
+                <img src="img/menu/vtornik-obed.jpg" alt="zavtrak">
+                <p>Lorem ipsum dolor sit amet.</p>
+                <div class="price">
+                    <span>$6</span>
+                    <button id="basket"><i class="fa-solid fa-basket-shopping"></i></button>
+                </div>
+            </div>  <div class="menu-column">
+                <h3>სამშაბათი: ვახშამი</h3>
+                <img src="img/menu/vtornik-ujin.jpg" alt="zavtrak">
+                <p>Lorem ipsum dolor sit amet.</p>
+                <div class="price">
+                    <span>$7</span>
+                    <button id="basket"><i class="fa-solid fa-basket-shopping"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+ 
+    <!-- Blog about healtht food -->
+    <section class="health-lifestyle">
+        <h2>ჯანსაღი ცხოვრების წესი</h2>
+        <div class="video-container">
+          <video controls poster="/dist/img/lifestyle.jpg">
+            <source src="/dist/img/Healthy Lifestyle.mp4"  type="video/mp4">
+          </video>
+        </div>
+      </section>
+
+    <section class="order">
+        <div class="container">
+            <h1>დაჯავშნეთ თქვენი საცდელი დღე ახლავე!</h1>
+            <form action="#" class="order__form">
+                <input type="text" placeholder="თქვენი სახელი" class="order__input">
+                <input type="text" placeholder="ტელეფონის ნომერი" class="order__input">
+                <button class="btn btn_dark btn_min" id="form_btn">დამირეკე</button>
+            </form>
+        </div>
+    </section>
+
+    <div class="divider"></div>
+    <section class="faq-block">
+        <h2>ხშირად დასმული კითხვები?</h2>
+        <div class="faq-item">
+          <div class="question">როგორ გავაკეთო შეკვეთა?</div>
+          <div class="answer">საკვების შესაკვეთად შეგიძლიათ გამოიყენოთ ჩვენი ონლაინ მენიუ. თქვენ უნდა აირჩიოთ კერძები და დაამატოთ ისინი კალათაში, შემდეგ განათავსოთ შეკვეთა.</div>
+        </div>
+        <div class="faq-item">
+          <div class="question">რა გადახდის მეთოდებს ეთანხმებით?</div>
+          <div class="answer">ჩვენ ვიღებთ გადახდას ნაღდი ანგარიშსწორებით და საკრედიტო ბარათით. საიტის საშუალებით შეკვეთისას შეგიძლიათ გადაიხადოთ ონლაინ.</div>
+        </div>
+        <div class="faq-item">
+          <div class="question">რამდენ ხანში იქნება მიწოდება?</div>
+          <div class="answer">მიწოდების დრო დამოკიდებულია თქვენს მდებარეობასა და სამზარეულოს დატვირთვაზე. მიწოდებას ჩვეულებრივ 30-დან 60 წუთამდე სჭირდება.</div>
+        </div>
+  
+        <div class="faq-item">
+          <div class="question">შეიცავს თუ არა თქვენს მენიუს საკვებს დიეტური შეზღუდვების მქონე ადამიანებისთვის?</div>
+          <div class="answer">დიახ, ჩვენ გვაქვს სპეციალური მენიუ დიეტური შეზღუდვების მქონე ადამიანებისთვის, როგორიცაა ვეგეტარიანელები, ვეგანები და ადამიანები, რომლებიც ალერგიული არიან გარკვეული საკვების მიმართ.</div>
+        </div>
+  
+        <div class="faq-item">
+          <div class="question">როგორ შემიძლია შევცვალო ან გავაუქმო შეკვეთა?</div>
+          <div class="answer"> შეგიძლიათ დაგვიკავშირდეთ ტელეფონით ან გამოგვიგზავნოთ ელ.წერილი შეკვეთის შესაცვლელად ან გასაუქმებლად. თუ თქვენ უკვე გადაიხადეთ შეკვეთა, ჩვენ დაგიბრუნებთ ფულს.</div>
+        </div>
+  
+        <div class="faq-item">
+          <div class="question">რამდენად ხშირად განაახლებთ თქვენს მენიუს?</div>
+          <div class="answer">
+            ჩვენ ვცდილობთ ყოველ სეზონზე განვაახლოთ ჩვენი მენიუ, რათა მომხმარებელს შევთავაზოთ ახალი გემოები და ახალი კერძები.</div>
+        </div>
+  
+        <div class="faq-item">
+          <div class="question">რამდენად ხშირად ამოწმებთ თქვენი კვების ხარისხს?</div>
+          <div class="answer">ჩვენ ყოველდღიურად ვამოწმებთ ჩვენი კერძების ხარისხს, რათა დავრწმუნდეთ, რომ ისინი აკმაყოფილებს ჩვენს ხარისხის სტანდარტებს. ჩვენ ასევე ვატარებთ რეგულარულ მიმოხილვებს ჩვენი კვების ექსპერტების მიერ, რათა დავრწმუნდეთ, რომ ჩვენი კვება არის მკვებავი და ჯანსაღი.</div>
+        </div>
+  
+        <div class="faq-item">
+          <div class="question">რა სერვისებს აწვდით დიდ ღონისძიებებს ან წვეულებებს?</div>
+          <div class="answer">ჩვენ გთავაზობთ ქეითერინგის მომსახურებას დიდი ღონისძიებებისა და წვეულებებისთვის. ჩვენ შეგვიძლია შემოგთავაზოთ ინდივიდუალური მენიუ და მოვაწყოთ კერძების მიტანა და მიტანა ღონისძიების ადგილზე.</div>
+        </div>
+      </section>
+
+    <section class="promotion">
+        <div class="bgc_y"></div>
+        <div class="container">
+            <div class="promotion__text">
+                <div class="title">აქცია ახალი მომხმარებლებისთვის!</div>
+                <div class="promotion__descr">
+                    ჩვენ ვაფასებთ თითოეულ კლიენტს და გთავაზობთ გახდეთ ერთ-ერთი მათგანი ძალიან ხელსაყრელი პირობებით.
+                    ყველა, ვინც შეუკვეთავს საკვების მიწოდებას ერთი კვირის განმავლობაში, მიიღებს <span>20% ფასდაკლებას!</span>
+                    <br><br>
+                    აქცია დასრულდება 16 ივნისს 00:00 საათზე
+                </div>
+            </div>
+            <div class="promotion__timer">
+                <div class="title">
+                    დარჩენილია აქციის დასრულებამდე:</div>
+                <div class="timer">
+                    <div class="timer__block">
+                        <span id="days">12</span>
+                        დღეები
+                    </div>
+                    <div class="timer__block">
+                        <span id="hours">20</span>
+                        საათები
+                    </div>
+                    <div class="timer__block">
+                        <span id="minutes">56</span>
+                        წუთები
+                    </div>
+                    <div class="timer__block">
+                        <span id="seconds">20</span>
+                        წამი
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <footer id="contacts">
+
+        <div class="container__footer">
+            <div class="box__footer">
+                <div class="logo">
+                    <img src="Images/logo-magtimus.png" alt="">
+                </div>
+                <div class="terms">
+                    <p>
+                        ჩვენ ვართ პროფესიონალთა გუნდი, რომელიც გთავაზობთ ხარისხიან მომსახურებას, ორიენტირებულია ინოვაციებზე და მომსახურების მაღალ დონეზე. ჩვენი მიზანია დავაკმაყოფილოთ ჩვენი კლიენტების საჭიროებები და მივაღწიოთ მათ წარმატებას. ჩვენ ვამაყობთ ჩვენი გამოცდილებით, საიმედოობითა და პროფესიონალიზმით. ჩვენ მზად ვართ დაგეხმაროთ თქვენი იდეების რეალიზებაში და გრძელვადიანი პარტნიორობის დამყარებაში.
+                    </p>
+                </div>
+            </div>
+
+            <div class="box__footer">
+                <h2>მისამართი</h2>
+                <a href="#">Tbilisi,Georgia Rustaveli ave</a>
+                <a href="#">nutriment@gmail.com</a>
+                <a href="#">+995 558 31 41 51</a>
+            </div>
+
+            <div class="box__footer">
+                <h2>კომპანია</h2>
+                <a href="#">ჩვენს შესახებ</a>
+                <a href="#">სერვისები</a>
+                <a href="#">კონტაქტები</a>           
+            </div>
+
+            <div class="box__footer">
+                <h2>სოციალური მედია</h2>
+                <a href="#"> <i class="fab fa-facebook-square"></i> Facebook</a>
+                <a href="#"><i class="fab fa-twitter-square"></i> Twitter</a>
+                <a href="#"><i class="fab fa-linkedin"></i> Linkedin</a>
+                <a href="#"><i class="fab fa-instagram-square"></i> Instagram</a>
+            </div>
+        </div>
+    </footer>
+    <div class="box__copyright">
+        <hr>
+        <p>NUTRIMENT <div class="pepper">
+            <img src="icons/veg.svg" alt="pepper">
+        </div> © 2023 created by <b>TAMERLAN QARAYEV</b></p>
+    </div>
+
+    <div class="modal">
+        <div class="modal__dialog">
+            <div class="modal__content">
+                <form action="#">
+                    <div date-close class="modal__close" id="modal-close">&times;</div>
+                    <div class="modal__title">ჩვენ დაგიკავშირდებით რაც შეიძლება მალე!</div>
+                    <input required placeholder="თქვენი სახელი" name="name" type="text" class="modal__input">
+                    <input required placeholder="თქვენი ტელეფონის ნომერი" name="phone" type="phone" class="modal__input">
+                    <button class="btn btn_dark btn_min">დამირეკე</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="../dist/js/bundle.js"></script>
+    <script src="app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+</body>
+</html>
